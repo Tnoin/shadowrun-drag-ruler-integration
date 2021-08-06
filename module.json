@@ -7,7 +7,8 @@
   "minimumCoreVersion": "0.8.8",
   "url": "https://github.com/Tnoin/shadowrun-drag-ruler-integration",
   "download": "https://github.com/Tnoin/shadowrun-drag-ruler-integration/archive/refs/heads/main.zip",
-  "compatibleCoreVersion":"",
+  "manifest": "https://raw.githubusercontent.com/Tnoin/shadowrun-drag-ruler-integration/main/module.json",
+  "compatibleCoreVersion":"0.8.8",
   "dependencies": [
     {
       "name": "drag-ruler",
