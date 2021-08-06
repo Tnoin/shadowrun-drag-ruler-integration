@@ -1,0 +1,17 @@
+{
+  "name": "shadowrun-drag-ruler-integration",
+  "title": "a drag-ruler integration for shadowrun",
+  "description": "It supports strange movement speeds by taking whats on the character sheet for run and walk seperatly instead of all-in-one",
+  "author": "Tnoin",
+  "version": "1.0.0",
+  "minimumCoreVersion": "0.8.8",
+  "compatibleCoreVersion":"",
+  "dependencies": [
+    {
+      "name": "drag-ruler",
+      "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-drag-ruler/master/module.json"
+    }],
+    "scripts": [
+      "scripts/hookSpeedProvider.js"
+    ]
+}
