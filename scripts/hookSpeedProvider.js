@@ -1,13 +1,3 @@
-console.log("TNOIN says it loaded");
-
-Hooks.on("init", function() {
-    console.log("TNOIN says init is in");
-});
-
-Hooks.on("ready", function() {
-    console.log("TNOIN says ready");
-});
-
 
 Hooks.once("dragRuler.ready", (SpeedProvider) => {
     class ShadowrunSpeedProvider extends SpeedProvider {
@@ -34,5 +24,5 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
         }
     }
 
-    dragRuler.registerModule("shadowrun-drag-ruler-integration", ShadowrunSpeedProvider)
+    dragRuler.registerModule("Drag Ruler Integration for Shadowrun 5E", ShadowrunSpeedProvider)
 })
