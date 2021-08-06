@@ -5,6 +5,8 @@
   "author": "Tnoin",
   "version": "1.0.0",
   "minimumCoreVersion": "0.8.8",
+  "url": "https://github.com/Tnoin/shadowrun-drag-ruler-integration",
+  "download": "https://github.com/Tnoin/shadowrun-drag-ruler-integration/archive/refs/heads/main.zip",
   "compatibleCoreVersion":"",
   "dependencies": [
     {
