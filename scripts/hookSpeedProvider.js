@@ -14,7 +14,7 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
             const runSpeed = token.actor.data.data.movement.run.value
             const sprintSpeed = token.actor.data.data.movement.sprint.value
 
-            // A character can always walk it's base speed and dash twice it's base speed
+            // Characters walk up to agi*2 unless thats modified, and sprint with agi*4, so lets just take the final value
             const ranges = [
                 {range: baseSpeed, color: "walk"},
                 {range: runSpeed, color: "dash"}
@@ -23,6 +23,5 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
             return ranges
         }
     }
-
-    dragRuler.registerModule("Drag Ruler Integration for Shadowrun 5E", ShadowrunSpeedProvider)
+    dragRuler.registerModule("drag-ruler-integration-for-shadowrun-5e", ShadowrunSpeedProvider)
 })
