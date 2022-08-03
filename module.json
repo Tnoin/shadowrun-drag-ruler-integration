@@ -3,12 +3,12 @@
   "title": "Drag Ruler Integration for Shadowrun 5E",
   "description": "It supports strange movement speeds by taking whats on the character sheet for run and walk seperatly instead of all-in-one",
   "author": "Tnoin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "minimumCoreVersion": "0.8.8",
   "url": "https://github.com/Tnoin/shadowrun-drag-ruler-integration",
   "download": "https://github.com/Tnoin/shadowrun-drag-ruler-integration/archive/refs/heads/main.zip",
   "manifest": "https://raw.githubusercontent.com/Tnoin/shadowrun-drag-ruler-integration/main/module.json",
-  "compatibleCoreVersion":"0.8.9",
+  "compatibleCoreVersion":"9",
   "dependencies": [
     {
       "name": "drag-ruler",
