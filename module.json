@@ -1,20 +1,32 @@
 {
-  "name": "drag-ruler-integration-for-shadowrun-5e",
+  "id": "rag-ruler-integration-for-shadowrun-5e",
   "title": "Drag Ruler Integration for Shadowrun 5E",
   "description": "It supports strange movement speeds by taking whats on the character sheet for run and walk seperatly instead of all-in-one",
-  "author": "Tnoin",
-  "version": "1.0.3",
-  "minimumCoreVersion": "0.8.8",
-  "url": "https://github.com/Tnoin/shadowrun-drag-ruler-integration",
-  "download": "https://github.com/Tnoin/shadowrun-drag-ruler-integration/archive/refs/heads/main.zip",
-  "manifest": "https://raw.githubusercontent.com/Tnoin/shadowrun-drag-ruler-integration/main/module.json",
-  "compatibleCoreVersion":"9",
-  "dependencies": [
+  "authors": [
     {
-      "name": "drag-ruler",
-      "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-drag-ruler/master/module.json"
-    }],
-    "scripts": [
-      "scripts/hookSpeedProvider.js"
+      "name": "Tnoin",
+      "flags": {}
+    }
+  ],
+  "url": "https://github.com/Tnoin/shadowrun-drag-ruler-integration",
+  "version": "1.0.4",
+  "scripts": [
+    "scripts/hookSpeedProvider.js"
+  ],
+  "manifest": "https://raw.githubusercontent.com/Tnoin/shadowrun-drag-ruler-integration/main/module.json",
+  "download": "https://github.com/Tnoin/shadowrun-drag-ruler-integration/archive/refs/heads/main.zip",
+  "relationships": {
+    "requires": [
+      {
+        "id": "drag-ruler",
+        "type": "module",
+        "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-drag-ruler/master/module.json",
+        "compatibility": {}
+      }
     ]
+  },
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10"
+  }
 }
