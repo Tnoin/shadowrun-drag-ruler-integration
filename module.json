@@ -15,7 +15,7 @@
   ],
   "url": "https://github.com/Tnoin/shadowrun-drag-ruler-integration",
   "manifest": "https://raw.githubusercontent.com/Tnoin/shadowrun-drag-ruler-integration/main/module.json",
-  "download": "https://github.com/Tnoin/shadowrun-drag-ruler-integration/archive/refs/tags/v1.0.4.2.zip",
+  "download": "https://github.com/Tnoin/shadowrun-drag-ruler-integration/archive/refs/tags/v1.0.4.3.zip",
   "relationships": {
     "requires": [
       {
