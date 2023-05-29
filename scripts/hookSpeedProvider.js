@@ -35,16 +35,29 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
 					config: true,
 					type: String,
 					default: ""
+				},
+				{
+					id: "onlyNPC",
+					name: "Only apply to NPC's",
+					hint: "should the condition be only applied to npc's",
+					scope: "world",
+					config: true,
+					type: Boolean,
+					default: ""
 				}
 			];
 		}
 		
 		async onMovementHistoryUpdate(tokens) {	
 			const condition = this.getSetting("runCondition");
-			for(var token of tokens){
-				const movedDistance = dragRuler.getMovedDistanceFromToken(token);
-				const range = dragRuler.getRangesFromSpeedProvider(token)[0]["range"];	
-				if(condition){
+			if(condition){
+				for(var token of tokens){
+					const movedDistance = dragRuler.getMovedDistanceFromToken(token);
+					const range = dragRuler.getRangesFromSpeedProvider(token)[0]["range"];
+					const npc_switch = this.getSetting("runCondition");
+					if(!token.actor.system.is_npc && npc_switch ){//token is not npc *and* only_npc is toggled
+						continue;
+					} 
 					if(movedDistance > range){
 						if (!game.cub.hasCondition(condition,token)) {
 							game.cub.addCondition(condition,token)
