@@ -50,11 +50,11 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
 		
 		async onMovementHistoryUpdate(tokens) {	
 			const condition = this.getSetting("runCondition");
+			const npc_switch = this.getSetting("onlyNPC");
 			if(condition){
 				for(var token of tokens){
 					const movedDistance = dragRuler.getMovedDistanceFromToken(token);
 					const range = dragRuler.getRangesFromSpeedProvider(token)[0]["range"];
-					const npc_switch = this.getSetting("runCondition");
 					if(!token.actor.system.is_npc && npc_switch ){//token is not npc *and* only_npc is toggled
 						continue;
 					} 
