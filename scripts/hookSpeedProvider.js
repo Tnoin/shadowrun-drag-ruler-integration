@@ -10,11 +10,16 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
         }
 
         getRanges(token) {
-            const baseSpeed = token.actor.system.movement.walk.value
-            const runSpeed = token.actor.system.movement.run.value
-			const maxSprint = token.actor.system.movement.sprint * token.actor.system.limits.physical.value
-            const sprintSpeed = maxSprint + token.actor.system.movement.run.value //sprint * phys-limit + run value is max sprint range
-
+            var baseSpeed = 0
+			var runSpeed = 0
+			var maxSprint =0
+			var sprintSpeed = 0
+            if(token.actor.system.movement){ //if there are values, use them. else the defaults are fine
+				baseSpeed = token.actor.system.movement.walk.value
+	            runSpeed = token.actor.system.movement.run.value
+				maxSprint = token.actor.system.movement.sprint * token.actor.system.limits.physical.value
+	            sprintSpeed = maxSprint + token.actor.system.movement.run.value //sprint * phys-limit + run value is max sprint range
+			}
             // Characters walk up to agi*2 unless thats modified, and sprint with agi*4, so lets just take the final value
             const ranges = [
                 {range: baseSpeed, color: "walk"},
