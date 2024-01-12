@@ -63,7 +63,7 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
 					if(!token.actor.system.is_npc && npc_switch ){//token is not npc *and* only_npc is toggled
 						continue;
 					} 
-					if(movedDistance > range){
+					if(movedDistance > range+1){
 						if (!game.cub.hasCondition(condition,token)) {
 							game.cub.addCondition(condition,token)
 						}
