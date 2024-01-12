@@ -34,8 +34,8 @@ Hooks.once("dragRuler.ready", (SpeedProvider) => {
 			return [
 				{
 					id: "runCondition",
-					name: "Name of the CUB condition",
-					hint: "If provided with the name of a CUB condition, it will attempt to apply it to tokens over their walking distance",
+					name: "Name of the Condition Lab condition",
+					hint: "If provided with the name of a Condition Lab condition, it will attempt to apply it to tokens who move over their walking distance",
 					scope: "world",
 					config: true,
 					type: String,
